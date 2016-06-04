@@ -1,2 +1,2 @@
 # sms-receiver
-Receives sms using a GSM modem and sends to a server.
+Receives SMS using a GSM modem and sends to a server.
