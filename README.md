@@ -17,15 +17,15 @@ Usage
 --------
 To use this first you need to edit `config.ini`.  Place the right port , and baudrate. If you need to send message to a server in server section set `send: true` and put the address of the server.
 
-____________________________________
-[Device]
-Port: /dev/ttyUSB0
-Baud_Rate: 115200
-
-[Server]
-Send: true
-Address: http://localhost/receive.php
-_________________________________________
+>
+[Device]  
+Port: /dev/ttyUSB0  
+Baud_Rate: 115200  
+  
+[Server]  
+Send: true  
+Address: http://localhost/receive.php  
+>
 
 If you dont know what is your port use `dmesg | grep tty` command to find the port address of your USB serial device. 
 Then make the program executable using `sudo chmor +x receive.py`.
