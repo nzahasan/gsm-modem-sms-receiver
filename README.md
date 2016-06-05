@@ -21,7 +21,6 @@ To use this first you need to edit `config.ini`.  Place the right port , and bau
 [Device]  
 Port: /dev/ttyUSB0  
 Baud_Rate: 115200  
-  
 [Server]  
 Send: true  
 Address: http://localhost/receive.php  
