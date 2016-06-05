@@ -96,13 +96,15 @@ def main():
 
 					# sending to server
 					if send2server == "true":
-						response =  requests.post(URL,{'sender': number,'text': text})
-						if response.status_code == 200:
-							cprint("✅ Sent to server.","green")
-							# delete sms after read
-							DeleteMsg(modem, index)
-						else:
-							cprint("⚞ Server send error!","red")
+						try:
+							response =  requests.post(URL,{'sender': number,'text': text})
+							if response.status_code == 200:
+								cprint("✅ Sent to server.","green")
+								DeleteMsg(modem, index)
+							else:
+								cprint("⚞ Server returned error: "+response.status_code,"red")
+						except:
+							cprint("⚞ Server unresponsive!","red")
 	
 	except KeyboardInterrupt:
 		modem.close()
