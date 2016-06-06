@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 import serial, time, requests, re, configparser
 from termcolor import cprint
 
