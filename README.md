@@ -2,7 +2,6 @@ SMS Reciever
 ===================
 This python program receives sms from a gsm modem using at command and sends it to a server via post request.
 
-----------
 
 Dependency
 -------------
