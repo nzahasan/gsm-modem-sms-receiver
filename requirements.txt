@@ -1,0 +1,4 @@
+pyserial>=3.0
+requests>=2.10.0
+configparser>=3.5.0
+termcolor>=1.1.0
