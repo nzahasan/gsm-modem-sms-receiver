@@ -31,8 +31,12 @@ def main():
 
 		port = config.get("Device","Port")
 		baudrate = int(config.get("Device","Baud_Rate"))
+		
 		send2server = config.get("Server","Send")
 		URL = config.get("Server","Address")
+
+		log = config.get("Logging","Log")
+		logFileName = config.get("Logging","File")
 	except:
 		cprint("⚞ Config read error!","red")
 		return
@@ -93,6 +97,12 @@ def main():
 						print(text)
 					except:
 						cprint ("⚞ Messege read error!","red")
+
+					# logging
+					if log =="true":
+						with file.open(logFileName,'a') as logFile:
+							logFile.write("["+number+"]\n"+text+"\n")
+						cprint("✅ Logged to "+logFileName+".","green")
 
 					# sending to server
 					if send2server == "true":
