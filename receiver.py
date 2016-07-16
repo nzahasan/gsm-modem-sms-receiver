@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-import serial, time, requests, re, configparser
 from termcolor import cprint
+import serial, time, requests, re, configparser
+
 
 # write command and read response
 def writeNread(modem,WriteCMD):
@@ -35,7 +36,7 @@ def main():
 		send2server = config.get("Server","Send")
 		URL = config.get("Server","Address")
 
-		log = config.get("Logging","Log")
+		isLogEnabled = config.get("Logging","Log")
 		logFileName = config.get("Logging","File")
 	except:
 		cprint("⚞ Config read error!","red")
@@ -99,7 +100,7 @@ def main():
 						cprint ("⚞ Messege read error!","red")
 
 					# logging
-					if log =="true":
+					if isLogEnabled =="true":
 						try:
 							with open(logFileName,'a') as logFile:
 								logFile.write("["+number+"]\n"+text+"\n\n")
