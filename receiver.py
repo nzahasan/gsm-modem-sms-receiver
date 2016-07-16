@@ -100,9 +100,13 @@ def main():
 
 					# logging
 					if log =="true":
-						with file.open(logFileName,'a') as logFile:
-							logFile.write("["+number+"]\n"+text+"\n")
-						cprint("✅ Logged to "+logFileName+".","green")
+						try:
+							with open(logFileName,'a') as logFile:
+								logFile.write("["+number+"]\n"+text+"\n\n")
+								#logFile.close()
+							cprint("✅ Logged to "+logFileName+".","green")
+						except:
+							cprint("⚞ Can't write to log file!","red")
 
 					# sending to server
 					if send2server == "true":
