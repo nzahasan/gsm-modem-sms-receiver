@@ -97,7 +97,7 @@ def main():
 						cprint ("[Text]","cyan")
 						print(text)
 					except:
-						cprint ("⚞ Messege read error!","red")
+						cprint ("> Messege read error!","red")
 
 					# logging
 					if isLogEnabled =="true":
@@ -105,9 +105,9 @@ def main():
 							with open(logFileName,'a') as logFile:
 								logFile.write("["+number+"]\n"+text+"\n\n")
 								#logFile.close()
-							cprint("✅ Logged to "+logFileName+".","green")
+							cprint("> Logged to "+logFileName+".","green")
 						except:
-							cprint("⚞ Can't write to log file!","red")
+							cprint("> Can't write to log file!","red")
 
 					# sending to server
 					if send2server == "true":
