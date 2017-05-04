@@ -19,8 +19,8 @@ Usage
 To use this first you need to edit `config.ini`.  Place the right port , and baudrate. If you need to send message to a server in server section set `send: true` and put the address of the server.
 
 > [Device]  
-> Port: /dev/ttyUSB0
-> Baud_Rate: 115200  
+> Port: /dev/ttyUSB0  
+> Baud_Rate: 115200 
 > [Server]  
 > Send: true  
 > Address: http://localhost/receive.php  
