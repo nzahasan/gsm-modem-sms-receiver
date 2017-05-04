@@ -12,12 +12,14 @@ These external python library was used in this program
 > - configparser (https://pypi.python.org/pypi/configparser)
 > - termcolor (https://pypi.python.org/pypi/termcolor)
 
+pip install -r requirements.txt -t ./
+
 Usage
 --------
 To use this first you need to edit `config.ini`.  Place the right port , and baudrate. If you need to send message to a server in server section set `send: true` and put the address of the server.
 
 >[Device]  
->Port: /dev/ttyUSB0  
+>Port: /dev/ttyUSB0
 >Baud_Rate: 115200  
   
 >[Server]  
