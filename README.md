@@ -26,5 +26,5 @@ Send: true
 Address: http://localhost/receive.php  
 ```
 If you dont know what is your port use `dmesg | grep tty` command to find the port address of your USB serial device. 
-Then make the program executable using `sudo chmor +x receive.py`.
+Then make the program executable using `sudo chmod +x receive.py`.
 To execute the program use `sudo ./receive.py`
